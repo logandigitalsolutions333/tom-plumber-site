@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1-Tom-Plumber | Fast & Reliable Plumbing</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  color: #1a1a1a;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 25px;
+  background: #28a745;
+  padding: 15px 30px;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #0d6efd;
+  border-radius: 8px;
+}
+
+.form-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Fast, Reliable Plumbing When You Need It Most</h1>
+  <p>Same-Day Service • Trusted Local Plumber</p>
+  <a class="cta" href="tel:5305030565">📞 Call Now</a>
+</div>
+
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Emergency Repairs</h3>
+      <p>Rapid response for urgent plumbing issues.</p>
+    </div>
+    <div class="card">
+      <h3>Drain Cleaning</h3>
+      <p>Clogs cleared fast with professional tools.</p>
+    </div>
+    <div class="card">
+      <h3>Water Heaters</h3>
+      <p>Repair or install done right the first time.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Work</h2>
+  <div class="services">
+    <div class="card"><p>Leak Repair</p></div>
+    <div class="card"><p>Drain Cleaning</p></div>
+    <div class="card"><p>Emergency Fix</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>What Customers Are Saying</h2>
+  <div class="reviews">
+    <div class="review">
+      <p>"Showed up fast and fixed my leak in no time."</p>
+    </div>
+    <div class="review">
+      <p>"Answered immediately during an emergency."</p>
+    </div>
+    <div class="review">
+      <p>"Honest pricing and great work."</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Prefer a Text Instead?</h2>
+  <div class="form-box">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" placeholder="What do you need help with?" rows="4"></textarea>
+      <button type="submit">Request Service</button>
+    </form>
+  </div>
+</div>
+
+<div class="section" style="text-align:center;">
+  <h2>Need Help Now?</h2>
+  <a class="cta" href="tel:5305030565">📞 Call Now</a>
+</div>
+
+<div class="footer">
+  <p>© 2026 1-Tom-Plumber | Licensed & Insured</p>
+</div>
+
+</body>
+</html>
