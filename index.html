@@ -194,6 +194,29 @@ button {
 .sticky-call:hover {
   transform: translateX(-50%) scale(1.05);
 } 
+    .sticky-text {
+  position: fixed;
+  bottom: 80px; /* sits above call button */
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  background: white;
+  color: #ff4da6;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #ff4da6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: all 0.2s ease;
+}
+
+.sticky-text:hover {
+  background: #ff4da6;
+  color: white;
+}
 }
 </style>
 </head>
@@ -290,6 +313,9 @@ button {
 </div>
 <a href="tel:5305030565" class="sticky-call">
   📞 Call Now
+</a>
+  <a href="sms:5305030565" class="sticky-text">
+  💬 Text Tom Now
 </a>
 </body>
 </html>
