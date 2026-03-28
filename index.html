@@ -11,6 +11,21 @@
   font-family: 'Segoe UI', sans-serif;
   background: #f4f6f8;
   color: #1a1a1a;
+    h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #ff4da6;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
 }
 
 .hero {
@@ -39,15 +54,19 @@
 .cta {
   display: inline-block;
   margin-top: 25px;
-  background: #28a745;
+  background: #ff4da6;
   padding: 16px 32px;
   color: white;
   font-size: 1.1em;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(255,77,166,0.4);
   transition: transform 0.2s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
 }
 
 .section {
@@ -84,15 +103,35 @@
 }
 .reviews {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .review {
   background: white;
   padding: 20px;
-  border-left: 5px solid #0d6efd;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  position: relative;
+  font-style: italic;
+}
+  .review::before {
+  content: "“";
+  font-size: 60px;
+  color: #ff4da6;
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  opacity: 0.2;
+}
+  .review:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+  .review {
+  width: 280px;
 }
 
 .form-box {
