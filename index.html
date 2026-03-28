@@ -14,25 +14,40 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('IMG_8501.jpeg');
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 80px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 2.8em;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  opacity: 0.9;
+}
 }
 
 .cta {
   display: inline-block;
   margin-top: 25px;
   background: #28a745;
-  padding: 15px 30px;
+  padding: 16px 32px;
   color: white;
   font-size: 1.1em;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
 }
 
 .section {
@@ -52,9 +67,10 @@
   background: white;
   padding: 25px;
   width: 280px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .reviews {
