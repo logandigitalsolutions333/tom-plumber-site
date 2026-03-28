@@ -174,6 +174,26 @@ button {
   font-style: normal;
   font-weight: bold;
   color: #333;
+   .sticky-call {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4da6;
+  color: white;
+  padding: 16px 30px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255,77,166,0.5);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.sticky-call:hover {
+  transform: translateX(-50%) scale(1.05);
+} 
 }
 </style>
 </head>
@@ -268,6 +288,8 @@ button {
 <div class="footer">
   <p>© 2026 1-Tom-Plumber | Licensed & Insured</p>
 </div>
-
+<a href="tel:5305030565" class="sticky-call">
+  📞 Call Now
+</a>
 </body>
 </html>
