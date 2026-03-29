@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1-Tom-Plumber | Fast & Reliable Plumbing</title>
 
 <style>
-  body {
+body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #f4f6f8;
   color: #1a1a1a;
-    h2 {
+}
+
+/* HEADINGS */
+h2 {
   text-align: center;
   margin-bottom: 30px;
   position: relative;
@@ -26,8 +29,8 @@ h2::after {
   margin: 10px auto 0;
   border-radius: 2px;
 }
-}
 
+/* HERO */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
               url('IMG_8498.jpeg');
@@ -49,8 +52,8 @@ h2::after {
   margin-top: 10px;
   opacity: 0.9;
 }
-}
 
+/* BUTTON */
 .cta {
   display: inline-block;
   margin-top: 25px;
@@ -69,12 +72,14 @@ h2::after {
   transform: scale(1.05);
 }
 
+/* SECTIONS */
 .section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
+/* SERVICES */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -91,16 +96,28 @@ h2::after {
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-  .card h3 {
+}
+
+.card h3 {
   margin-top: 10px;
 }
-  .card p {
+
+.card p {
   opacity: 0.8;
 }
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
 }
+
+/* REVIEWS */
 .reviews {
   display: flex;
   flex-wrap: wrap;
@@ -109,14 +126,17 @@ h2::after {
 }
 
 .review {
+  width: 280px;
   background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   position: relative;
   font-style: italic;
+  transition: all 0.2s ease;
 }
-  .review::before {
+
+.review::before {
   content: "“";
   font-size: 60px;
   color: #ff4da6;
@@ -125,15 +145,21 @@ h2::after {
   left: 15px;
   opacity: 0.2;
 }
-  .review:hover {
+
+.review:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  transition: all 0.2s ease;
-}
-  .review {
-  width: 280px;
 }
 
+.review strong {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+  color: #333;
+}
+
+/* FORM */
 .form-box {
   background: white;
   padding: 30px;
@@ -154,69 +180,47 @@ button {
   background: #0d6efd;
   color: white;
   border: none;
+  font-size: 1em;
 }
 
+/* FOOTER */
 .footer {
   background: #111;
   color: white;
   text-align: center;
   padding: 25px;
 }
-  .card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-  .review strong {
-  display: block;
-  margin-top: 10px;
-  font-style: normal;
-  font-weight: bold;
-  color: #333;
-   .sticky-call {
+
+/* ✅ STICKY BUTTONS FIXED */
+.sticky-call {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 20px;
   background: #ff4da6;
   color: white;
-  padding: 16px 30px;
+  padding: 16px 22px;
   border-radius: 50px;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 8px 25px rgba(255,77,166,0.5);
   z-index: 1000;
-  transition: transform 0.2s ease;
 }
 
-.sticky-call:hover {
-  transform: translateX(-50%) scale(1.05);
-} 
-    .sticky-text {
+.sticky-text {
   position: fixed;
-  bottom: 80px; /* sits above call button */
-  left: 10px;
-  right: 10px;
-  text-align: center;
+  bottom: 80px;
+  right: 20px;
   background: white;
   color: #ff4da6;
-  padding: 16px;
-  border-radius: 12px;
-  font-size: 1.1em;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-size: 1em;
   font-weight: bold;
   text-decoration: none;
   border: 2px solid #ff4da6;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   z-index: 1000;
-  transition: all 0.2s ease;
-}
-
-.sticky-text:hover {
-  background: #ff4da6;
-  color: white;
-}
 }
 </style>
 </head>
@@ -232,18 +236,22 @@ button {
 <div class="section">
   <h2>Our Services</h2>
   <div class="services">
+
     <div class="card">
       <h3>Emergency Repairs</h3>
       <p>Rapid response for urgent plumbing issues.</p>
     </div>
+
     <div class="card">
-      <h3>Drain Cleaning</h3>
-      <p>Clogs cleared fast with professional tools.</p>
+      <h3>Friendly Service</h3>
+      <p>Respectful, clean, and professional from start to finish.</p>
     </div>
+
     <div class="card">
-      <h3>Water Heaters</h3>
-      <p>Repair or install done right the first time.</p>
+      <h3>Fair Pricing</h3>
+      <p>Upfront, honest pricing with no surprises.</p>
     </div>
+
   </div>
 </div>
 
@@ -272,22 +280,22 @@ button {
 <div class="section">
   <h2>What Customers Are Saying</h2>
   <div class="reviews">
-    <div class="review">
-  <div class="stars">★★★★★</div>
-  <p>"Showed up fast and fixed my leak in no time."</p>
-  <strong>- Sarah M.</strong>
-</div>
-    <div class="review">
-  <div class="stars">★★★★★</div>
-  <p>"Answered immediately during an emergency."</p>
-  <strong>- Jason T.</strong>
-</div>
 
-<div class="review">
-  <div class="stars">★★★★★</div>
-  <p>"Honest pricing and great work."</p>
-  <strong>- Mike R.</strong>
-</div>
+    <div class="review">
+      <p>"Showed up fast and fixed my leak in no time."</p>
+      <strong>- Sarah M.</strong>
+    </div>
+
+    <div class="review">
+      <p>"Answered immediately during an emergency."</p>
+      <strong>- Jason T.</strong>
+    </div>
+
+    <div class="review">
+      <p>"Honest pricing and great work."</p>
+      <strong>- Mike R.</strong>
+    </div>
+
   </div>
 </div>
 
@@ -311,11 +319,10 @@ button {
 <div class="footer">
   <p>© 2026 1-Tom-Plumber | Licensed & Insured</p>
 </div>
-<a href="tel:5305030565" class="sticky-call">
-  📞 Call Now
-</a>
-  <a href="sms:5305030565" class="sticky-text">
-  💬 Text Tom Now
-</a>
+
+<!-- ✅ STICKY BUTTONS -->
+<a href="tel:5305030565" class="sticky-call">📞 Call</a>
+<a href="sms:5305030565" class="sticky-text">💬 Text</a>
+
 </body>
 </html>
