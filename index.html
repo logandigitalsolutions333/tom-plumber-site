@@ -3,160 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>1-Tom-Plumber | Fast & Reliable Plumbing</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f6f8;
-  color: #1a1a1a;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* HEADINGS */
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  position: relative;
+body {
+  background: #f8fafc;
+  color: #111;
 }
 
-h2::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 4px;
-  background: #ff4da6;
-  margin: 10px auto 0;
-  border-radius: 2px;
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
 }
 
 /* HERO */
 .hero {
+  height: 90vh;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
               url('IMG_8498.jpeg');
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 120px 20px;
+  display: flex;
+  align-items: center;
   text-align: center;
+  padding: 0 5%;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero h1 {
-  font-size: 2.8em;
-  max-width: 700px;
-  margin: auto;
+  font-size: 48px;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 18px;
+  margin-bottom: 25px;
   opacity: 0.9;
 }
 
-/* BUTTON */
-.cta {
-  display: inline-block;
-  margin-top: 25px;
+.btn {
+  padding: 15px 30px;
   background: #ff4da6;
-  padding: 16px 32px;
   color: white;
-  font-size: 1.1em;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 5px 15px rgba(255,77,166,0.4);
-  transition: transform 0.2s ease;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.cta:hover {
-  transform: scale(1.05);
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,77,166,0.4);
 }
 
 /* SECTIONS */
-.section {
-  padding: 60px 20px;
-  max-width: 1000px;
+section {
+  padding: 80px 5%;
+  max-width: 1100px;
   margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 /* SERVICES */
 .services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .card {
   background: white;
-  padding: 25px;
-  width: 280px;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-  margin-top: 10px;
-}
-
-.card p {
-  opacity: 0.8;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* REVIEWS */
-.reviews {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
 .review {
-  width: 280px;
   background: white;
-  padding: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #ff4da6, #ff7ac1);
+  color: white;
+  text-align: center;
+  padding: 70px 5%;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  position: relative;
-  font-style: italic;
-  transition: all 0.2s ease;
 }
 
-.review::before {
-  content: "“";
-  font-size: 60px;
+.cta a {
+  background: white;
   color: #ff4da6;
-  position: absolute;
-  top: -10px;
-  left: 15px;
-  opacity: 0.2;
-}
-
-.review:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-
-.review strong {
-  display: block;
-  margin-top: 10px;
-  font-style: normal;
-  font-weight: bold;
-  color: #333;
+  margin-top: 15px;
+  display: inline-block;
 }
 
 /* FORM */
@@ -164,98 +164,117 @@ h2::after {
   background: white;
   padding: 30px;
   border-radius: 10px;
-  max-width: 500px;
-  margin: auto;
 }
 
 input, textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
 
 button {
   width: 100%;
-  padding: 15px;
-  background: #0d6efd;
+  padding: 14px;
+  background: #ff4da6;
   color: white;
   border: none;
-  font-size: 1em;
 }
 
 /* FOOTER */
-.footer {
-  background: #111;
-  color: white;
+footer {
   text-align: center;
   padding: 25px;
+  background: #111;
+  color: white;
 }
 
-/* ✅ STICKY BUTTONS FIXED */
-.sticky-call {
+/* FLOAT BUTTONS */
+.call-btn, .text-btn {
   position: fixed;
-  bottom: 20px;
   right: 20px;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.call-btn {
+  bottom: 20px;
   background: #ff4da6;
   color: white;
-  padding: 16px 22px;
-  border-radius: 50px;
-  font-size: 1em;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(255,77,166,0.5);
-  z-index: 1000;
 }
 
-.sticky-text {
-  position: fixed;
+.text-btn {
   bottom: 80px;
-  right: 20px;
   background: white;
-  color: #ff4da6;
-  padding: 14px 20px;
-  border-radius: 50px;
-  font-size: 1em;
-  font-weight: bold;
-  text-decoration: none;
   border: 2px solid #ff4da6;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  z-index: 1000;
+  color: #ff4da6;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <div class="logo">1-Tom-Plumber</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 <div class="hero">
-  <h1>Fast, Reliable Plumbing When You Need It Most</h1>
-  <p>Same-Day Service • Trusted Local Plumber</p>
-  <a class="cta" href="tel:5305030565">📞 Call Now</a>
+  <div class="hero-content">
+    <h1>Fast, Reliable Plumbing When You Need It Most</h1>
+    <p>Same-Day Service • Trusted Local Plumber</p>
+    <a href="tel:5305030565" class="btn">📞 Call Now</a>
+  </div>
 </div>
 
-<div class="section">
+<section id="services">
   <h2>Our Services</h2>
   <div class="services">
 
     <div class="card">
       <h3>Emergency Repairs</h3>
-      <p>Rapid response for urgent plumbing issues.</p>
+      <p>Rapid response when you need it most.</p>
     </div>
 
     <div class="card">
       <h3>Friendly Service</h3>
-      <p>Respectful, clean, and professional from start to finish.</p>
+      <p>Clean, respectful, professional work.</p>
     </div>
 
     <div class="card">
       <h3>Fair Pricing</h3>
-      <p>Upfront, honest pricing with no surprises.</p>
+      <p>Honest pricing with no surprises.</p>
     </div>
 
   </div>
-</div>
+</section>
 
-<div class="section">
+<section>
   <h2>Our Work</h2>
   <div class="services">
 
@@ -275,54 +294,57 @@ button {
     </div>
 
   </div>
-</div>
+</section>
 
-<div class="section">
+<section id="reviews">
   <h2>What Customers Are Saying</h2>
-  <div class="reviews">
 
-    <div class="review">
-      <p>"Showed up fast and fixed my leak in no time."</p>
-      <strong>- Sarah M.</strong>
-    </div>
+  <div class="review">⭐⭐⭐⭐⭐ "Showed up fast and fixed my leak in no time." — Sarah M.</div>
+  <div class="review">⭐⭐⭐⭐⭐ "Answered immediately during an emergency." — Jason T.</div>
+  <div class="review">⭐⭐⭐⭐⭐ "Honest pricing and great work." — Mike R.</div>
 
-    <div class="review">
-      <p>"Answered immediately during an emergency."</p>
-      <strong>- Jason T.</strong>
-    </div>
+</section>
 
-    <div class="review">
-      <p>"Honest pricing and great work."</p>
-      <strong>- Mike R.</strong>
-    </div>
+<section class="cta">
+  <h2>Need Help Right Now?</h2>
+  <p>Call or text and get immediate help.</p>
+  <a href="tel:5305030565" class="btn">Call Now</a>
+</section>
 
-  </div>
-</div>
+<section id="contact">
+  <h2>Request Service</h2>
 
-<div class="section">
-  <h2>Prefer a Text Instead?</h2>
   <div class="form-box">
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <textarea name="message" placeholder="What do you need help with?" rows="4"></textarea>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <textarea rows="4" placeholder="What do you need help with?"></textarea>
       <button type="submit">Request Service</button>
     </form>
   </div>
-</div>
 
-<div class="section" style="text-align:center;">
-  <h2>Need Help Now?</h2>
-  <a class="cta" href="tel:5305030565">📞 Call Now</a>
-</div>
+</section>
 
-<div class="footer">
+<footer>
   <p>© 2026 1-Tom-Plumber | Licensed & Insured</p>
-</div>
+</footer>
 
-<!-- ✅ STICKY BUTTONS -->
-<a href="tel:5305030565" class="sticky-call">📞 Call</a>
-<a href="sms:5305030565" class="sticky-text">💬 Text</a>
+<a href="tel:5305030565" class="call-btn">📞 Call</a>
+<a href="sms:5305030565" class="text-btn">💬 Text</a>
+
+<script>
+const elements = document.querySelectorAll('.card, .review');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
